@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر الزنج الأرخص</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+  body {
+    font-family: 'Amiri', serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    height: 90vh;
+  }
+
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+
+  .product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+  }
+
+  .product img {
+    width: 100px; /* قلل من حجم الصور لتناسب التصميم */
+    height: auto; /* سيعدل الارتفاع تلقائيًا لمطابقة النسبة الصحيحة */
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .product-details {
+    flex: 1;
+  }
+
+  .product-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .product-price {
+    color: #00ff00;
+    font-weight: bold;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .payment-methods {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .payment-methods img {
+    width: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .payment-methods img:hover {
+    transform: scale(1.1);
+  }
+
+  .alert {
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>متجر الزنج الأرخص</h1>
+
+  <!-- تكرار المنتج -->
+  <div class="product">
+    <img src="https://i.ibb.co/XjbNSp7/product-1.jpg" alt="صورة المنتج الأول">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج الأول</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(0)">اشتر الآن</button>
+      <div class="alert" id="alert0">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/98VzXWK/product-2.jpg" alt="صورة المنتج الثاني">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج الثاني</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(1)">اشتر الآن</button>
+      <div class="alert" id="alert1">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/zG2YpBF/product-3.jpg" alt="صورة المنتج الثالث">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج الثالث</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(2)">اشتر الآن</button>
+      <div class="alert" id="alert2">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/HC4FV76/product-4.jpg" alt="صورة المنتج الرابع">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج الرابع</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(3)">اشتر الآن</button>
+      <div class="alert" id="alert3">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/Srqfby1/product-5.jpg" alt="صورة المنتج الخامس">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج الخامس</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(4)">اشتر الآن</button>
+      <div class="alert" id="alert4">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/mR6SPqk/product-6.jpg" alt="صورة المنتج السادس">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج السادس</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(5)">اشتر الآن</button>
+      <div class="alert" id="alert5">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="https://i.ibb.co/yRpnYp2/product-7.jpg" alt="صورة المنتج السابع">
+    <div class="product-details">
+      <div class="product-title">اسم المنتج السابع</div>
+      <div class="product-price">السعر: $100</div>
+      <button onclick="showAlert(6)">اشتر الآن</button>
+      <div class="alert" id="alert6">لا تشترِ العبد إلا والعصا معه‼</div>
+    </div>
+  </div>
+  <!-- نهاية تكرار المنتج -->
+
+  <div class="contact-info">
+    <h2>للاتصال:</h2>
+    <p>البريد الإلكتروني: zing@niggmail.com</p>
+    <p>رقم الهاتف: +905340355912</p>
+  </div>
+
+  <div class="payment-methods">
+    <img src="https://i.ibb.co/n
